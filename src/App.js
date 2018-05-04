@@ -18,26 +18,40 @@ class App extends Component {
 
   // lifecycle method: look up all the lifecycle methods on the documentation, they render at different time. For example: componentDidMount
   // this is where you will add information that you grab through an API
+getTodos({
+
+})
+
+getProjects(){
+  this.setState({
+    projects: [
+      {
+        id: uuid.v4(),
+        title: "Business Website",
+        category: "Web Design"
+      },
+      {
+        id: uuid.v4(),
+        title: "Social App",
+        category: "Mobile Development"
+      },
+      {
+        id: uuid.v4(),
+        title: "Ecommerce Shopping Card",
+        category: "Web Development"
+      }
+    ]
+  });
+}
+
   componentWillMount() {
-    this.setState({
-      projects: [
-        {
-          id: uuid.v4(),
-          title: "Business Website",
-          category: "Web Design"
-        },
-        {
-          id: uuid.v4(),
-          title: "Social App",
-          category: "Mobile Development"
-        },
-        {
-          id: uuid.v4(),
-          title: "Ecommerce Shopping Card",
-          category: "Web Development"
-        }
-      ]
-    });
+    this.getProjects();
+    this.getTodos();
+  }
+
+  // when you get information from an API, do it using componentDidMount
+  componentDidMount(){
+
   }
 
   handleAddProject(project) {
