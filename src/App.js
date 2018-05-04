@@ -36,12 +36,19 @@ class App extends Component {
     });
   }
 
+  handleAddProject(project) {
+    // console.log(project);
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({ projects: projects });
+  }
+
   render() {
     // when you return in a render, you can only have one element. For example, everything here is wrapped in a single DIV.
     // import projects to appear below app content
     return (
       <div className="App">
-        <AddProject />
+        <AddProject addProject={this.handleAddProject.bind(this)} />
         <Projects projects={this.state.projects} />
       </div>
     );
