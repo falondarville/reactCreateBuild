@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Projects from "./Components/projects";
+import AddProject from "./Components/AddProject";
 import "./App.css";
 import registerServiceWorker from "./registerServiceWorker";
 
@@ -40,7 +41,7 @@ class App extends Component {
     // import projects to appear below app content
     return (
       <div className="App">
-        My app.
+        <AddProject />
         <Projects projects={this.state.projects} />
       </div>
     );
