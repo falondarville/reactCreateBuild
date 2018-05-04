@@ -66,4 +66,10 @@ class AddProject extends Component {
   }
 }
 
+// Proptypes will throw warnings when type does not match
+AddProject.propTypes = {
+  categories: React.PropTypes.array,
+  addProject: React.PropTypes.func
+};
+
 export default AddProject;

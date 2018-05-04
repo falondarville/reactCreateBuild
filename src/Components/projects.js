@@ -29,4 +29,10 @@ class Projects extends Component {
   }
 }
 
+// Proptypes will throw warnings when type does not match
+Projects.propTypes = {
+  projects: React.PropTypes.array,
+  onDelete: React.PropTypes.func
+};
+
 export default Projects;

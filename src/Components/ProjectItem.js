@@ -22,4 +22,10 @@ class ProjectItem extends Component {
   }
 }
 
+// Proptypes will throw warnings when type does not match
+ProjectItem.propTypes = {
+  project: React.PropTypes.object,
+  onDelete: React.PropTypes.func
+};
+
 export default ProjectItem;
